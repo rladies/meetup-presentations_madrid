@@ -13,3 +13,4 @@
 	- [Typeform report](https://github.com/rladies/meetup-presentations_madrid/blob/master/madrid_20161024_first-presentation/R-Ladies%20pre-first%20Madrid-report.csv)
 	- [Get data from meetup](https://github.com/rladies/meetup-presentations_madrid/blob/master/madrid_20161024_first-presentation/getdata_meetup.R)
 	- [Plots](https://github.com/rladies/meetup-presentations_madrid/blob/master/madrid_20161024_first-presentation/getdata_meetup.R)
+	- [Slides](https://docs.google.com/presentation/d/1e-YucRxJd3Ub92hq5iN_wr2EL4Cy_BUY4IsKDjCmDYM/edit#slide=id.g35f391192_00)
