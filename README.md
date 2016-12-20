@@ -3,6 +3,7 @@
 <!-- MarkdownTOC autolink="true" autoanchor="true" bracket="round" depth="4"-->
 
 - [2016-24-10 First meetup](#2016-24-10-first-meetup)
+- [2016-11-16 NLP para todas](#2016-11-16-nlp-para-todas)
 
 <!-- /MarkdownTOC -->
 
@@ -14,3 +15,12 @@
 	- [Get data from meetup](https://github.com/rladies/meetup-presentations_madrid/blob/master/madrid_20161024_first-presentation/getdata_meetup.R)
 	- [Plots](https://github.com/rladies/meetup-presentations_madrid/blob/master/madrid_20161024_first-presentation/getdata_meetup.R)
 	- [Slides](https://docs.google.com/presentation/d/1e-YucRxJd3Ub92hq5iN_wr2EL4Cy_BUY4IsKDjCmDYM/edit#slide=id.g35f391192_00)
+
+<a name="2016-11-16-nlp-para-todas"></a>
+### 2016-11-16 NLP para todas
+
+- Leticia's talk
+	- [Code](https://github.com/nimbusaeta/Friends)
+	- [Slides](https://dl.dropboxusercontent.com/u/5638597/NLP%20con%20R%20-%20Friends.pptx)
+- Laura's talk
+	- [Slides](https://drive.google.com/open?id=1S0w6PPkzjzX2lxigbBGbrVJamyHdGp3_UMhgDth6A5s)
