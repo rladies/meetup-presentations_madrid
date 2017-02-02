@@ -31,6 +31,7 @@
 <a name="2016-12-13-meetup-data-data-data-web--iniciación-a-rvest-y-httr"></a>
 ### 2016-12-13 Meetup data data data web! + Iniciación a rvest y httr
 
+- María's talk
 - Inés' talk
 - Workshop
 
@@ -40,6 +41,6 @@
 
 - Bea's talk
 	- [Slides](https://drive.google.com/open?id=1TaX1vijAk8y57uPnrsvf9HpsObUZ5O4634aZNDviDjM)
-- Maria's talk
+- María's talk
 	- [Slides](https://github.com/mariamedp/rladies-negocio)
 - Leticia's talk
