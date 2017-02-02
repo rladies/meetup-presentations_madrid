@@ -4,6 +4,8 @@
 
 - [2016-24-10 First meetup](#2016-24-10-first-meetup)
 - [2016-11-16 NLP para todas](#2016-11-16-nlp-para-todas)
+- [2016-12-13 Meetup data data data web! + Iniciación a rvest y httr](#2016-12-13-meetup-data-data-data-web--iniciación-a-rvest-y-httr)
+- [2017-01-31 R + Negocios \(¿quieres contarnos tu experiencia?\)](#2017-01-31-r--negocios-¿quieres-contarnos-tu-experiencia)
 
 <!-- /MarkdownTOC -->
 
@@ -24,3 +26,20 @@
 	- [Slides](https://dl.dropboxusercontent.com/u/5638597/NLP%20con%20R%20-%20Friends.pptx)
 - Laura's talk
 	- [Slides](https://drive.google.com/open?id=1S0w6PPkzjzX2lxigbBGbrVJamyHdGp3_UMhgDth6A5s)
+
+
+<a name="2016-12-13-meetup-data-data-data-web--iniciación-a-rvest-y-httr"></a>
+### 2016-12-13 Meetup data data data web! + Iniciación a rvest y httr
+
+- Inés' talk
+- Workshop
+
+
+<a name="2017-01-31-r--negocios-¿quieres-contarnos-tu-experiencia"></a>
+### 2017-01-31 R + Negocios (¿quieres contarnos tu experiencia?)
+
+- Bea's talk
+	- [Slides](https://drive.google.com/open?id=1TaX1vijAk8y57uPnrsvf9HpsObUZ5O4634aZNDviDjM)
+- Maria's talk
+	- [Slides](https://github.com/mariamedp/rladies-negocio)
+- Leticia's talk
