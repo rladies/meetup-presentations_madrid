@@ -44,3 +44,4 @@
 - María's talk
 	- [Slides](https://github.com/mariamedp/rladies-negocio)
 - Leticia's talk
+	- [Slides](https://t.co/kbMnibgO6G)
