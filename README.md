@@ -49,4 +49,5 @@
 
 <a name="2017-02-25-r-in-finance-industries"></a>
 ### 2017-02-25 R in finance industries
-- [Chiayi's talk](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20170225_r-finance/R-Ladies_Madrid_20170225.pdf)
+- Chiayi's talk
+	-[Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20170225_r-finance/R-Ladies_Madrid_20170225.pdf)
