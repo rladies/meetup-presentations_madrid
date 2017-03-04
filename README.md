@@ -6,6 +6,7 @@
 - [2016-11-16 NLP para todas](#2016-11-16-nlp-para-todas)
 - [2016-12-13 Meetup data data data web! + Iniciación a rvest y httr](#2016-12-13-meetup-data-data-data-web--iniciación-a-rvest-y-httr)
 - [2017-01-31 R + Negocios \(¿quieres contarnos tu experiencia?\)](#2017-01-31-r--negocios-¿quieres-contarnos-tu-experiencia)
+- [2017-02-25 R in finance industries](#2017-02-25-r-in-finance-industries)
 
 <!-- /MarkdownTOC -->
 
@@ -45,3 +46,7 @@
 	- [Slides](https://github.com/mariamedp/rladies-negocio)
 - Leticia's talk
 	- [Slides](https://t.co/kbMnibgO6G)
+
+<a name="2017-02-25-r-in-finance-industries"></a>
+### 2017-02-25 R in finance industries
+- [Chiayi's talk](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20170225_r-finance/R-Ladies_Madrid_20170225.pdf)
