@@ -8,6 +8,8 @@
 - [2017-01-31 R + Negocios (¿quieres contarnos tu experiencia?)](#2017-01-31-r-negocios-quieres-contarnos-tu-experiencia)
 - [2017-02-25 R in finance industries](#2017-02-25-r-in-finance-industries)
 - [2017-03-25 R-Ladies + Geoinquietos: Visualización de mapas](#2017-03-25-r-ladies-geoinquietos-visualizacin-de-mapas)
+- [2017-04-21 R-Ladies + Wikimujeres: Editatona de programadoras](#2017-04-21-r-ladies-wikimujeres-editatona-de-programadoras)
+- [2017-05-03 R-Ladies: Uso de API (del NYT) con R](#2017-05-03-r-ladies-uso-de-api-del-nyt-con-r)
 
 <!-- /TOC -->
 
