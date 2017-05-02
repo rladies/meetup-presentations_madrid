@@ -46,5 +46,14 @@
 	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20170225_r-finance/R-Ladies_Madrid_20170225.pdf)
 
 ### 2017-03-25 R-Ladies + Geoinquietos: Visualización de mapas
-- Taller (Ramiro + Elena + María + Anahí)
+- Workshop (Ramiro + Elena + María + Anahí)
 	- [Repository](https://github.com/GeoinquietosMadrid/datavis-with-r)
+
+### 2017-04-21 R-Ladies + Wikimujeres: Editatona de programadoras
+- Inés' talk
+	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20170421_editatona)
+
+### 2017-05-03 R-Ladies: Uso de API (del NYT) con R
+- Inés' talk
+	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20170503_api_periodismo_datos)
+	- [Workshop](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20170503_api_periodismo_datos)

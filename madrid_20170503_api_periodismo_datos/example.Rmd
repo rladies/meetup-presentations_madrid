@@ -1,0 +1,137 @@
+---
+title: "Ejemplos API NYT"
+output: 
+  html_notebook:
+    toc: true
+---
+
+## Crear una Api Key
+
+Desde la web [New York Times Developer](https://developer.nytimes.com/signup) se crea una API Key cuando nos damos de alta.
+
+Podemos explorar las distintas posibilidades que nos da la API del NYT desde la [página de documentación](https://developer.nytimes.com/). Desde esta web podemos acceder a la consola de las distintas peticiones que nos deja hacer la API.
+
+## Ejemplos
+
+Vamos a realizar los ejemplos desde la consola de pruebas del NYT y desde R para comparar los resultados. El contenido de los resultados es el mismo, R nos da la posibilidad de trabajar con los datos una vez extraídos. Además desde R podemos hacer llamadas parametrizadas los que nos ayuda a la hora de extraer mucha información del periódico.
+
+1. Para hacer los ejemplos desde consola necesitamos solo la API Key: _7a5b2bdad4c24495ab4fa6edfe0d96ea_
+2. Para hacer los ejemplos desde R tenemos que cargar las librerías para hacer las llamadas a la API y necesitamos la API Key.
+
+```{r setup}
+library(httr)
+base_url <- 'https://api.nytimes.com/svc/'
+api_key <- '7a5b2bdad4c24495ab4fa6edfe0d96ea'
+```
+
+### Histórico de noticias
+
+Obtener el listado de las noticias más importantes del 2016 Octubre. _Cuidado: mucha información en el request._
+
+**Desde consola**
+
+Accedemos a la [consola](https://developer.nytimes.com/archive_api.json). [Request desde el navegador](https://api.nytimes.com/svc/archive/v1/2016/10.json?api-key=7a5b2bdad4c24495ab4fa6edfe0d96ea)
+
+**Desde R**
+
+```{r oct2016, echo=TRUE}
+oct2016_url <- paste0(base_url, 'archive/v1/2016/10.json?api-key=', api_key)
+oct2016 <- GET(oct2016_url)
+first_article <- content(oct2016)$response$docs[[1]]
+cat('La URL del primer artículo es \n', first_article$web_url)
+cat('El párrafo principal del primer artículo es \n', first_article$lead_paragraph)
+cat('La subsección del primer artículo es \n', first_article$subsection_name)
+```
+
+### Búsqueda de artículos por palabras clave
+
+Buscar artículos por palabra clave y otros parámetros. En este caso la palabra clave es _Rajoy_.
+
+**Desde consola**
+
+Accedemos a la [consola](https://developer.nytimes.com/article_search_v2.json#/Console/GET/articlesearch.json). [Request desde el navegador](https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=7a5b2bdad4c24495ab4fa6edfe0d96ea&q=mariano+rajoy&begin_date=20160430)
+
+**Desde R**
+
+```{r rajoy, echo=TRUE}
+rajoy_url <- paste0(base_url, 'search/v2/articlesearch.json?api-key=', api_key, '&q=Mariano+Rajoy&begin_date=20160430')
+rajoy <- GET(rajoy_url)
+rajoy_first <- content(rajoy)$response$docs[[1]]
+cat('La URL del artículo es \n', rajoy_first$web_url)
+cat('La publicación del artículo tiene fecha\n', rajoy_first$pub_date)
+```
+
+### Reseñas de películas
+
+Obtener la información de la reseña de Amelie en el New York Times.
+
+**Desde consola**
+
+Accedemos a la [consola](https://developer.nytimes.com/movie_reviews_v2.json#/Console/GET/reviews/search.json). [Request desde el navegador](https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=7a5b2bdad4c24495ab4fa6edfe0d96ea&query=Amelie)
+
+**Desde R**
+
+```{r amelie, echo=TRUE}
+amelie_url <- paste0(base_url, 'movies/v2/reviews/search.json?api-key=', api_key, '&query=Amelie')
+amelie <- GET(amelie_url)
+amelie <- content(amelie)$results[[1]]
+cat('El título de la película es\n', amelie$display_title)
+cat('La publicación del artículo tiene fecha\n', amelie$publication_date)
+cat('La URL de la reseña es\n', amelie$link$url)
+```
+
+### Bestsellers
+
+Obtener la información de los libros más vendidos de New York Times para edades entre 15 y 18 años.
+
+**Desde consola**
+
+Accedemos a la [consola](https://developer.nytimes.com/books_api.json#/Console/GET/lists/best-sellers/history.json). [Request desde el navegador](https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=7a5b2bdad4c24495ab4fa6edfe0d96ea&age-group=Ages+15+to+18)
+
+**Desde R**
+
+```{r books, echo=TRUE}
+book_url <- paste0(base_url, 'books/v3/lists/best-sellers/history.json?api-key=', api_key, '&age-group=Ages+15+to+18')
+book <- GET(book_url)
+book_first <- content(book)$results[[1]]
+cat('El título del libro es\n', book_first$title)
+cat('El autor del libro es\n', book_first$author)
+cat('El género del libro es\n', book_first$ranks_history[[1]]$list_name)
+```
+
+### Los artículos más vistos
+
+Obtención de los artículos más vistos
+
+**Desde consola**
+
+Accedemos a la [consola](https://developer.nytimes.com/most_popular_api_v2.json#/Console/GET/mostshared/%7Bsection%7D/%7Btime-period%7D.json). [Request desde el navegador](https://api.nytimes.com/svc/mostpopular/v2/mostviewed/Opinion/7.json?api-key=7a5b2bdad4c24495ab4fa6edfe0d96ea)
+
+**Desde R**
+
+```{r views, echo=TRUE}
+views_url <- paste0(base_url, 'mostpopular/v2/mostviewed/Opinion/7.json?api-key=', api_key)
+views <- GET(views_url)
+views_first <- content(views)$results[[1]]
+url_comments <- shared_first$url
+cat('El título de la noticia es\n', shared_first$title)
+cat('La publicación del artículo tiene fecha\n', shared_first$published_date)
+cat('La URL de la noticia es\n', url_comments)
+```
+
+### Comentarios de la noticia anterior
+
+Obtener los comentarios de la noticia recogida en el ejemplo anterior.
+
+**Desde consola**
+
+Accedemos a la [consola](https://developer.nytimes.com/community_api_v3.json#/Console/GET/user-content/url.json). [Request desde el navegador](http://api.nytimes.com/svc/community/v3/user-content/url.json?api-key=7a5b2bdad4c24495ab4fa6edfe0d96ea&url=https://www.nytimes.com/2017/04/24/opinion/sheryl-sandberg-how-to-build-resilient-kids-even-after-a-loss.html)
+
+**Desde R**
+
+```{r comments, echo=TRUE}
+comments_url <- paste0(base_url, 'community/v3/user-content/url.json?api-key=', api_key, '&url=', url_comments)
+comments <- GET(comments_url)
+comments_first <- content(comments)$results[[1]][[1]]
+cat('El comentario es\n', comments_first$commentBody)
+```
