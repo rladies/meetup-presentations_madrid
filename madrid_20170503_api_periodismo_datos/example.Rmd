@@ -113,9 +113,9 @@ Accedemos a la [consola](https://developer.nytimes.com/most_popular_api_v2.json#
 views_url <- paste0(base_url, 'mostpopular/v2/mostviewed/Opinion/7.json?api-key=', api_key)
 views <- GET(views_url)
 views_first <- content(views)$results[[1]]
-url_comments <- shared_first$url
-cat('El título de la noticia es\n', shared_first$title)
-cat('La publicación del artículo tiene fecha\n', shared_first$published_date)
+url_comments <- views_first$url
+cat('El título de la noticia es\n', views_first$title)
+cat('La publicación del artículo tiene fecha\n', views_first$published_date)
 cat('La URL de la noticia es\n', url_comments)
 ```
 
