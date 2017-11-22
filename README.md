@@ -74,5 +74,10 @@
 - [Ulises](https://github.com/RLadiesMadrid/contribuir-al-open-source)
 
 #### 2017-10-17 R-Ladies + Lingẅars: Taller de minería de textos con R
-- Lorena's Talk and Claudia & Veronica's workwhop
+- Lorena's Talk and Claudia & Veronica's workshop
 	- [Repository](https://github.com/RLadiesMadrid/rladies_textmining)
+
+#### 2017-11-18 Intro a R y Machine LeaRRRRning
+- Karina's workshop
+	- [Slides](http://slides.com/kgd/rladiestalk#/)
+
