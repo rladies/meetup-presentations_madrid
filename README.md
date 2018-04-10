@@ -5,17 +5,24 @@
 	- [2016-24-10 First meetup](#2016-24-10-first-meetup)
 	- [2016-11-16 NLP para todas](#2016-11-16-nlp-para-todas)
 	- [2016-12-13 Meetup data data data web! + Iniciación a rvest y httr](#2016-12-13-meetup-data-data-data-web-iniciacin-a-rvest-y-httr)
-	- [2017-01-31 R + Negocios (¿quieres contarnos tu experiencia?)](#2017-01-31-r-negocios-quieres-contarnos-tu-experiencia)
+	- [2017-01-31 R en negocios (¿quieres contarnos tu experiencia?)](#2017-01-31-r-negocios-quieres-contarnos-tu-experiencia)
 	- [2017-02-25 R in finance industries](#2017-02-25-r-in-finance-industries)
-	- [2017-03-25 R-Ladies + Geoinquietos: Visualización de mapas](#2017-03-25-r-ladies-geoinquietos-visualizacin-de-mapas)
-	- [2017-04-21 R-Ladies + Wikimujeres: Editatona de programadoras](#2017-04-21-r-ladies-wikimujeres-editatona-de-programadoras)
-	- [2017-05-03 R-Ladies: Uso de API (del NYT) con R](#2017-05-03-r-ladies-uso-de-api-del-nyt-con-r)
-	- [2017-05-11 R-Ladies + AdaLab + OS Weekends](#2017-05-11-r-ladies-adalab-os-weekends)
+	- [2017-03-25 R-Ladies Madrid + Geoinquietos: Visualización de mapas](#2017-03-25-r-ladies-geoinquietos-visualizacin-de-mapas)
+	- [2017-04-21 R-Ladies Madrid + Wikimujeres: Editatona de programadoras](#2017-04-21-r-ladies-wikimujeres-editatona-de-programadoras)
+	- [2017-05-03 Periodismo de datos: Uso de API (del NYT) con R](#2017-05-03-r-ladies-uso-de-api-del-nyt-con-r)
+	- [2017-05-11 R-Ladies Madrid + AdaLab + OS Weekends: Wikinews](#2017-05-11-r-ladies-adalab-os-weekends)
 	- [2017-06-03 Call Of Data](#2017-06-03-call-of-data)
-	- [2017-07-06 R-Ladies Madrid: Recap y nuevos objetivos](#2017-07-06-r-ladies-madrid-recap-y-nuevos-objetivos)
+	- [2017-07-06 Recap y nuevos objetivos](#2017-07-06-r-ladies-madrid-recap-y-nuevos-objetivos)
 - [2017 - 2018](#2017-2018)
 	- [2017-09-19 Presentación del nuevo curso + Contribuir a un proyecto Open Source](#2017-09-19-presentacin-del-nuevo-curso-contribuir-a-un-proyecto-open-source)
 	- [2017-10-17 R-Ladies + Lingẅars: Taller de minería de textos con R](#2017-10-17-r-ladies-lingars-taller-de-minera-de-textos-con-r)
+	- 2017-11-18 Intro a R & Proyectos
+	- 2017-12-05 Pubquiz navideño: R-Ladies + PyLadies + OSWeekends + HaskellMAD
+	- 2018-01-24 Testeo y depuración con R
+	- 2018-02-18 R-Ladies Madrid + Big Data Madrid + Neo4j España + Big Data Spain: Graph Analytics (hands-on) + Neo4j gRaphs (intro)
+	- 2018-03-05 Women Tech Communities Meetup
+	- 2018-03-22 Medio ambiente y salud: análisis con R
+	- 2018-04-04 R-Ladies Madrid + PyLadies Madrid + Tensorflow Madrid + GDG Madrid + GDG Cloud Madrid: Tensorflow Dev Summit
 
 <!-- /TOC -->
 
