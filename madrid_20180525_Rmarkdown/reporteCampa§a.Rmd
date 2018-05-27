@@ -1,0 +1,139 @@
+---
+date: '`r Sys.Date()`'
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    df_print: kable
+    fig_height: 2
+params:
+  campaignID: 37810
+  campaignName: Coca Cola
+  objetivo: clicks
+---
+
+---
+title: `r params$campaignName`
+---
+
+
+## Reporte de campaña
+
+Este es el reporte de la campaña de *`r params$campaignName`*  con código `r params$campaignID` y objetivo *`r params$objetivo`*.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+options(knitr.table.format = "latex")
+
+library(knitr)
+library(kableExtra)
+
+library(ggplot2)
+library(dplyr)
+library(scales)
+source('ReportFile_functions.R')
+```
+
+
+
+```{r summary}
+summary <- getSummary(params$campaignID)
+
+summary %>%
+    kable(format="latex", align=c('c','c'), format.args=list(big.mark = ','))%>%
+    kable_styling(latex_options = c("striped", "hover", "condensed"), full_width = F)
+```
+
+
+```{r campaignInfo}
+campaignInfo <- getInfoCampaign(campaignDF, params$objetivo)
+```
+
+## Información de Campaña
+
+A continuación podemos ver la evolución de los `r params$objetivo` a lo largo de la campaña.
+
+```{r text_reach_objective}
+objReach <- getReachObjective(campaignInfo, params$objetivo,  summary$Objetivo[[1]])
+
+textObj <- paste("El día", 
+                        objReach$date, 
+                        "se alcanza el objetivo de ",params$objetivo," establecido en la campaña.")
+```
+
+```{r text_info_campaign}
+# Calcular el maximo objetivo
+objMax<-getMaxObj(campaignInfo, params$objetivo)
+# Coger el dia del maximo objetivo
+objMaxDF<-campaignInfo[campaignInfo[[params$objetivo]] == objMax, ]
+# Crear texto con resultado
+text <- textMaxObj(objMaxDF, params$objetivo)
+```
+
+`r paste('- ', textObj)`
+`r paste('- ', text)`
+
+
+
+```{r clicks_graph}
+ggplot(campaignInfo, aes_string(x='day', y=params$objetivo)) + 
+    geom_point(color = rgb(40,79,91, max=255)) +
+    labs(y = params$objetivo) + 
+    theme(axis.text.x = element_text(angle = 45, hjust = 1), axis.title.x = element_blank()) 
+
+```
+
+```{r costs}
+costsInfo <- getCosts(params$campaignID)
+```
+
+```{r cost_graph}
+ggplot(costsInfo, aes_string(x = 'month_day', y = 'cpc')) + 
+    geom_point(color = rgb(40,79,91, max=255)) +
+    labs(y = paste0('coste por ', params$objetivo)) + 
+    scale_y_continuous(labels = dollar_format(prefix="",suffix="€")) + 
+    theme(axis.text.x = element_text(angle = 45, hjust = 1), axis.title.x = element_blank())
+```
+
+\pagebreak
+
+## Resultados por Estrategia
+
+Los siguientes gráficos muestran la evolución de `r params$objetivo` en la campaña según las estrategias utilizadas.
+
+```{r strategy_info}
+strategyInfo <- getStrategyInfo(campaignID)
+```
+
+```{r adserver_info}
+adserverInfo <- getAdserverInfo(campaignID)
+```
+
+```{r text_strategy}
+textStrategy <- textStrategy(strategyInfo, 'clicks')
+```
+
+`r paste('- ', textStrategy)`
+
+```{r strategy_graph}
+ggplot(adserverInfo, aes_string(x = 'day', y = params$objetivo, fill = 'strategy')) +
+    geom_bar(stat = "identity") + 
+    theme(axis.text.x = element_text(angle = 45, hjust = 1), axis.title.x = element_blank()) + 
+    labs(y = paste0('Total ', params$objetivo), fill='Estrategia')
+
+```
+
+## Observaciones
+
+En la siguiente tabla se muestran algunas observaciones y modificaciones importantes hechas durante la campaña.
+
+```{r observaciones}
+insights <- getInsights(campaignID)
+```
+
+```{r}
+kable(insights, format = "latex", longtable=T, booktabs = T, 
+      caption = "Comentarios de campaña")%>%
+  kable_styling(full_width = F, 
+                latex_options = c("striped", "hold_position", "repeat_header")) %>%
+  column_spec(2, width = "35em")
+```
