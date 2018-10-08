@@ -112,3 +112,11 @@
 	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20180525_public-research)
 - Samantha's Talk
 	- [Code](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20180525_Rmarkdown)
+
+	#### 2018-09-25 R-Ladies Madrid: Git + GitHub + RStudio
+
+	- R-Ladies
+		- [Slides](https://docs.google.com/presentation/d/1QgSuNfx7Zb6iR7iY_UhdPptOE_z3zDbkaP2x7wbs5u8/edit?usp=sharing)
+	- Workshop
+		- [Slides](https://slides.com/elenam-lopez/taller-de-introduccion-a-git-y-github)
+		- [Install in Windows](https://slides.com/mrcodedev/instalar-git-en-windows)
