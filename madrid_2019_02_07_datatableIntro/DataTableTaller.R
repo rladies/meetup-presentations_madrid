@@ -1,10 +1,10 @@
 #----------------------------------------------------------
 # Data table Help
-# Sara Rodríguez López
-# colledit : http://collabedit.com/xcp5y
+# Sara RodrÃ­guez LÃ³pez
+# colledit : http://collabedit.com/xcp5y # documento online que usamos para compartir cÃ³digo 
 # Check: Cheat Sheet data table https://s3.amazonaws.com/assets.datacamp.com/blog_assets/datatable_Cheat_Sheet_R.pdf
 #----------------------------------------------------------
-# Comparaciones de tiempos de ejecución
+# Comparaciones de tiempos de ejecuciÃ³n
 # https://github.com/Rdatatable/data.table/wiki
 # https://h2oai.github.io/db-benchmark/ # aqui compara con spark
 # https://github.com/Rdatatable/data.table/wiki/Benchmarks-%3A-Grouping # dplyr, datatable pandas
@@ -17,19 +17,19 @@
 # install.packages("data.table")
 library(data.table)
 
-# Reducimos el tiempo de crear el código ( repetimos menos el nombre de las variables)
-# Reducimos el tiempo de computación (más rápido que dplyr!)
-# Muy rápido a la hora de leer y escribir (paraleliza)
+# Reducimos el tiempo de crear el cÃ³digo ( repetimos menos el nombre de las variables)
+# Reducimos el tiempo de computaciÃ³n (mÃ¡s rÃ¡pido que dplyr!)
+# Muy rÃ¡pido a la hora de leer y escribir (paraleliza)
 # Operacioens como filtros y joinings se paralelizan (con secondary keys)
 # data.table es un data.frame --> puedes aplicarle las mismas funciones listas para los data.frame
 
 # When the number of rows to print exceeds the global option datatable.print.nrows (default = 100), 
 # it automatically prints only the top 5 and bottom 5 rows. 
-# If you’ve had a lot of experience with data.frames, you may have found yourself waiting around while 
+# If youâ€™ve had a lot of experience with data.frames, you may have found yourself waiting around while 
 # larger tables print-and-page, sometimes seemingly endlessly. 
 
 ################################################
-# TIEMPOS DE CARGA
+# EJEMPLO DE COMPARATIVA DE TIEMPOS DE CARGA
 # "https://github.com/arunsrinivasan/flights/wiki/NYCflights14/flights14.csv"
 # DT 
 
@@ -41,14 +41,14 @@ class(flightsdf)
 
 ########################################################
 # VISUALIZAR
-flights # SI SON MENOS DE 100 TE LO MUESTRA ENTERO, SI NO 5 PRIEMRAS FILAS Y 5 ÚLTIMAS FILAS
+flights # SI SON MENOS DE 100 TE LO MUESTRA ENTERO, SI NO 5 PRIEMRAS FILAS Y 5 ÃšLTIMAS FILAS
 flightsdf
 
 ########################################################
 # ENTENDER LOS ROWNAMES
 # Row numbers are printed with a : in order to visually separate the row number from the first column.
 
-set.seed(4L) # En R para pasar un numeric (así se llaman float en R) a integer ponemos la L
+set.seed(4L) # En R para pasar un numeric (asÃ­ se llaman float en R) a integer ponemos la L
 dfPrueba <- data.frame(ShopID=c(rep("A",5),rep("B",2),rep("C",5)),
                        Price=sample(10:60, 12) ,
                        Units=c(1:8,seq(5,11,2))*10,
@@ -62,11 +62,11 @@ dfPrueba["C",]
 
 # Y si lo convierto a datatable...
 dtprueba<-as.data.table(dfPrueba)
-dtprueba # los índices han desaparecido!
+dtprueba # los Ã­ndices han desaparecido!
 rownames(dtprueba)
 # si lo fuerzo...
 dtprueba<-as.data.table(dfPrueba,keep.rownames = TRUE)
-dtprueba # me añadade una nueva columna!!!
+dtprueba # me aÃ±adade una nueva columna!!!
 
 
 # dt[i, j, by] 
@@ -92,14 +92,14 @@ dtprueba # me añadade una nueva columna!!!
 #----------------------------------------------------------
 # Creation of a data table
 #----------------------------------------------------------
-set.seed(4L) # En R para pasar un numeric (así se llaman float en R) a integer ponemos la L
+set.seed(4L) # En R para pasar un numeric (asÃ­ se llaman float en R) a integer ponemos la L
 DT <- data.table(ShopID=c(rep("A",5),rep("B",2),rep("C",5)),
                  Price=sample(10:60, 12) ,
                  Units=c(1:8,seq(5,11,2))*10,
                  Class = c(rep("Food",2),rep("Drinks",5),rep("Clothes",2),rep("Food",3)))
 
 class(DT)
-# se acepta como dataframe en paquetes que no saben que es un datatable y funcionará ok con ellos!!
+# se acepta como dataframe en paquetes que no saben que es un datatable y funcionarÃ¡ ok con ellos!!
 
 # We can change it to dataframe
 df <- as.data.frame(DT)
@@ -143,7 +143,7 @@ DT[-(1:5)]
 
 # Select all rows that have a specific value in  a column --> Clear syntaxi!
 # df[df$Class == "Food",] o hago un attach(df) y entonces df[Class=="Food",]
-DT[Class == "Food"] # ¿Qué es lo que estás metiendo ahí ? DT$Class=="Food"
+DT[Class == "Food"] # Â¿QuÃ© es lo que estÃ¡s metiendo ahÃ­ ? DT$Class=="Food"
 DT[Class != "Food"]
 
 # Select all rows that have value x or y in column a column
@@ -220,7 +220,7 @@ DT[,1]
 
 # sum price
 DT[,sum(Price)] 
-sum(DT[,.(Price)]) # resultado es un número
+sum(DT[,.(Price)]) # resultado es un nÃºmero
 sum(DT[,Price])
 DT[,.(sum(Price))]
 DT[, .(sum_price = sum(Price))] # assign a name to the sum variable
@@ -255,7 +255,7 @@ DT[, .(max_price = max(Price)), by=.(Class, ShopID)]
 
 # 3.2. Group by a variable and order 
 DT[, .(max_price = max(Price)), keyby=.(Class, ShopID)]
-# 3.3. Group by result of a function. # grouping variables in increasing order # no funciona el - para ordenar al revés
+# 3.3. Group by result of a function. # grouping variables in increasing order # no funciona el - para ordenar al revÃ©s
 
 
 # Mean units available depending on price
@@ -367,15 +367,15 @@ DT[, c("index", "new_index","new_index2", "asc_index", "des_index") := NULL]
 
 
 #----------------------------------------------------------
-# 6. Extras útiles
+# 6. Extras Ãºtiles
 #----------------------------------------------------------
 
-# Devuelve índice de las filas donde se cumple la condición
+# Devuelve Ã­ndice de las filas donde se cumple la condiciÃ³n
 DT[,.I[ShopID%in% c("A","C")]]
-# Primero hace el subset y sobre este devuelve los índices
+# Primero hace el subset y sobre este devuelve los Ã­ndices
 DT[ShopID =="A",.I]
 
-# Hacer operaciones con filas de antes y después
+# Hacer operaciones con filas de antes y despuÃ©s
 DT2 <- data.table(mes = c("E","F","M","A","MY"),Agua=1:5, Luz=1:5*10, Calefac=1:5*100)
 DT2[ , LuzSig := shift(Luz, 1L, type="lead")][]
 DT2[ , c("Agua-1","Agua-2") := .(shift(Agua, 1L, type="lag"),shift(Agua, 2L, type="lag"))][]
@@ -389,12 +389,12 @@ DT2[ , Calefacsum := Reduce(`+`, shift(Calefac, 1:2,type = "lag"))][]
 ######Animate y lee sobre las keys
 
 # Copy data tables
-# Cuando es por valor, la información de la variable se almacenan en una dirección de memoria diferente 
+# Cuando es por valor, la informaciÃ³n de la variable se almacenan en una direcciÃ³n de memoria diferente 
 # al recibirla en la funcion, por lo tanto si el valor de esa variable cambia no afecta la variable original,
-# solo se modifica dentro del contexto de la función.
+# solo se modifica dentro del contexto de la funciÃ³n.
 
-# Cuando es por referencia, la variable que se recibe como parámetro en la función apunta exactamente a la misma
-# dirección de memoria que la variable original por lo que si dentro de la función se modifica su valor también 
+# Cuando es por referencia, la variable que se recibe como parÃ¡metro en la funciÃ³n apunta exactamente a la misma
+# direcciÃ³n de memoria que la variable original por lo que si dentro de la funciÃ³n se modifica su valor tambiÃ©n 
 # se modifica la variable original.
 
 # https://www.rdocumentation.org/packages/data.table/versions/1.11.8/topics/copy
