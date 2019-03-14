@@ -106,17 +106,25 @@
 
 #### 2018-04-04 R-Ladies Madrid + PyLadies Madrid + Tensorflow Madrid + GDG Madrid + GDG Cloud Madrid: Tensorflow Dev Summit
 
-#### 2018-05-25 R-Ladies Madrid: Medio ambiente y Flexdashboards con R!
+#### 2018-05-25 Medio ambiente y Flexdashboards con R!
 
 - Dariya's Talk
 	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20180525_public-research)
 - Samantha's Talk
 	- [Code](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20180525_Rmarkdown)
 
-	#### 2018-09-25 R-Ladies Madrid: Git + GitHub + RStudio
+#### 2018-09-25 Git + GitHub + RStudio
 
-	- R-Ladies
-		- [Slides](https://docs.google.com/presentation/d/1QgSuNfx7Zb6iR7iY_UhdPptOE_z3zDbkaP2x7wbs5u8/edit?usp=sharing)
-	- Workshop
-		- [Slides](https://slides.com/elenam-lopez/taller-de-introduccion-a-git-y-github)
-		- [Install in Windows](https://slides.com/mrcodedev/instalar-git-en-windows)
+- R-Ladies
+	- [Slides](https://docs.google.com/presentation/d/1QgSuNfx7Zb6iR7iY_UhdPptOE_z3zDbkaP2x7wbs5u8/edit?usp=sharing)
+- Workshop
+	- [Slides](https://slides.com/elenam-lopez/taller-de-introduccion-a-git-y-github)
+	- [Install in Windows](https://slides.com/mrcodedev/instalar-git-en-windows)
+
+#### 2019-03-12 Flexdashboards y trucos de R
+
+- Marta Vicente
+	- [Slides](https://www.slideshare.net/martitacdc/flexsdashboard)
+- Virginia Peón
+	- [Post en Medium](medium.com/@vpeon/cosas-chulas-con-R)
+	- [Código](github.com/vpeon/cosas-chulas-con-R)
