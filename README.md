@@ -126,5 +126,5 @@
 - Marta Vicente
 	- [Slides](https://www.slideshare.net/martitacdc/flexsdashboard)
 - Virginia Peón
-	- [Post en Medium](https://medium.com/@vpeon/cosas-chulas-con-R)
+	- [Post en Medium](https://medium.com/@vpeon/cosas-chulas-para-probar-en-r-6ca1a7045a30)
 	- [Código](https://github.com/vpeon/cosas-chulas-con-R)
