@@ -151,15 +151,14 @@
 #### 2019-04-15 Global Graph Celebration Day
 
 - Inés Huertas: el algoritmo de Dijkstra
-	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/2019-04-15 Dijkstra.pdf)
+	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/2019-04-15_Dijkstra.pdf)
 - Beatriz Pérez: la noche de los grafos vivientes
-	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/.pdf)
 - María Medina: aprende teoría de grafos con las tramas de corrupción en España
-	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/2019-04-15 Grafos Corrupción.pdf)
+	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/2019-04-15_Grafos_Corrupcion.pdf)
 
 ### 2019 - 2020
 
 #### 2019-09-07 R-Ladies Madrid @ Xantardev
 
 - Leticia Martín-Fuertes y Elen Irazabal: Scrapeando el BOE descubrí un tesoro:
-	- [Slides de la primera parte](https://github.com/rladies/meetup-presentations_madrid/tree/master/santiago_20190907_xantardev/BOE - R-Ladies @ Xantardev.pdf)
+	- [Slides de la primera parte](https://github.com/rladies/meetup-presentations_madrid/tree/master/santiago_20190907_xantardev/BOE.pdf)
