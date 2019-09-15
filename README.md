@@ -106,17 +106,60 @@
 
 #### 2018-04-04 R-Ladies Madrid + PyLadies Madrid + Tensorflow Madrid + GDG Madrid + GDG Cloud Madrid: Tensorflow Dev Summit
 
-#### 2018-05-25 R-Ladies Madrid: Medio ambiente y Flexdashboards con R!
+#### 2018-05-25 Medio ambiente y Flexdashboards con R!
 
 - Dariya's Talk
 	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20180525_public-research)
 - Samantha's Talk
 	- [Code](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20180525_Rmarkdown)
 
-	#### 2018-09-25 R-Ladies Madrid: Git + GitHub + RStudio
+### 2018 - 2019
 
-	- R-Ladies
-		- [Slides](https://docs.google.com/presentation/d/1QgSuNfx7Zb6iR7iY_UhdPptOE_z3zDbkaP2x7wbs5u8/edit?usp=sharing)
-	- Workshop
-		- [Slides](https://slides.com/elenam-lopez/taller-de-introduccion-a-git-y-github)
-		- [Install in Windows](https://slides.com/mrcodedev/instalar-git-en-windows)
+#### 2018-09-25 Git + GitHub + RStudio
+
+- R-Ladies
+	- [Slides](https://docs.google.com/presentation/d/1QgSuNfx7Zb6iR7iY_UhdPptOE_z3zDbkaP2x7wbs5u8/edit?usp=sharing)
+- Workshop
+	- [Slides](https://slides.com/elenam-lopez/taller-de-introduccion-a-git-y-github)
+	- [Install in Windows](https://slides.com/mrcodedev/instalar-git-en-windows)
+
+#### 2019-03-12 Flexdashboards y trucos de R-Ladies
+
+- Marta Vicente
+	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190312_flexdashboards)
+
+- Virginia Peón
+	- [Post en Medium](https://medium.com/@vpeon/cosas-chulas-para-probar-en-r-6ca1a7045a30)
+	- [Código](https://github.com/vpeon/cosas-chulas-con-R)
+
+
+
+- R-Ladies
+	- [Slides](https://docs.google.com/presentation/d/1QgSuNfx7Zb6iR7iY_UhdPptOE_z3zDbkaP2x7wbs5u8/edit?usp=sharing)
+- Workshop
+	- [Slides](https://slides.com/elenam-lopez/taller-de-introduccion-a-git-y-github)
+	- [Install in Windows](https://slides.com/mrcodedev/instalar-git-en-windows)
+
+#### 2019-03-12 Flexdashboards y trucos de R
+
+- Marta Vicente
+	- [Slides](https://www.slideshare.net/martitacdc/flexsdashboard)
+- Virginia Peón
+	- [Post en Medium](https://medium.com/@vpeon/cosas-chulas-para-probar-en-r-6ca1a7045a30)
+	- [Código](https://github.com/vpeon/cosas-chulas-con-R)
+
+#### 2019-04-15 Global Graph Celebration Day
+
+- Inés Huertas: el algoritmo de Dijkstra
+	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/2019-04-15 Dijkstra.pdf)
+- Beatriz Pérez: la noche de los grafos vivientes
+	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/.pdf)
+- María Medina: aprende teoría de grafos con las tramas de corrupción en España
+	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/2019-04-15 Grafos Corrupción.pdf)
+
+### 2019 - 2020
+
+#### 2019-09-07 R-Ladies Madrid @ Xantardev
+
+- Leticia Martín-Fuertes y Elen Irazabal: Scrapeando el BOE descubrí un tesoro:
+	- [Slides de la primera parte](https://github.com/rladies/meetup-presentations_madrid/tree/master/santiago_20190907_xantardev/BOE - R-Ladies @ Xantardev.pdf)
