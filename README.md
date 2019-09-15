@@ -132,7 +132,7 @@
 	- [Post en Medium](https://medium.com/@vpeon/cosas-chulas-para-probar-en-r-6ca1a7045a30)
 	- [Código](https://github.com/vpeon/cosas-chulas-con-R)
 
-
+#### 2018-09-25 Git + GitHub + RStudio
 
 - R-Ladies
 	- [Slides](https://docs.google.com/presentation/d/1QgSuNfx7Zb6iR7iY_UhdPptOE_z3zDbkaP2x7wbs5u8/edit?usp=sharing)
