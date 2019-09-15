@@ -153,6 +153,7 @@
 - Inés Huertas: el algoritmo de Dijkstra
 	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/2019-04-15_Dijkstra.pdf)
 - Beatriz Pérez: la noche de los grafos vivientes
+	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/2019-04-15_Zombies.pdf)
 - María Medina: aprende teoría de grafos con las tramas de corrupción en España
 	- [Slides](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190415_global-graph-celebration-day/2019-04-15_Grafos_Corrupcion.pdf)
 
