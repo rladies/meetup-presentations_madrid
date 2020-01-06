@@ -163,3 +163,8 @@
 
 - Leticia Martín-Fuertes y Elen Irazabal: Scrapeando el BOE descubrí un tesoro:
 	- [Slides de la primera parte](https://github.com/rladies/meetup-presentations_madrid/tree/master/santiago_20190907_xantardev/BOE.pdf)
+
+#### 2019-11-26 R-Ladies Madrid @ DevAcademy
+
+- Ana Guardia: DescaRgando datos de la SEC:
+	- [Slides](https://popiula.github.io/Nov2019_RLadiesTalk)
