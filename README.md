@@ -168,3 +168,10 @@
 
 - Ana Guardia: DescaRgando datos de la SEC:
 	- [Slides](https://popiula.github.io/Nov2019_RLadiesTalk)
+	
+### 2020 - 2021
+
+#### 2020-09-29
+
+-Cynthia Maldonado: Intro a R:
+       -https://github.com/RLadiesMadrid/Intro-R-/tree/main
