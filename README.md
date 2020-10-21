@@ -174,7 +174,7 @@
 #### 2020-09-28
 
 - Cynthia Maldonado: Intro a R:
-       - [Slides y código](https://github.com/RLadiesMadrid/Intro-R-/tree/main)
+	- [Slides y código](https://github.com/RLadiesMadrid/Intro-R-/tree/main)
 
 #### 2020-10-19
 
