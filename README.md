@@ -171,7 +171,13 @@
 	
 ### 2020 - 2021
 
-#### 2020-09-29
+#### 2020-09-28
 
--Cynthia Maldonado: Intro a R:
-       -https://github.com/RLadiesMadrid/Intro-R-/tree/main
+- Cynthia Maldonado: Intro a R:
+       - [Slides y código](https://github.com/RLadiesMadrid/Intro-R-/tree/main)
+
+#### 2020-10-19
+
+- María Paula Caldas: Recorriendo el Tidyverse
+	- [Slides y código](https://github.com/mpaulacaldas/rrrtidyverse)
+
