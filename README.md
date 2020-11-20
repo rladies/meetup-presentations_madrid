@@ -176,18 +176,23 @@
 	
 ### 2020 - 2021
 
-#### 2020-09-28
+#### 2020-09-28 - taller
 
 - Cynthia Maldonado: Intro a R
+	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/273193691/) con toda la info
 	- [Slides y código](https://github.com/RLadiesMadrid/Intro-R-/tree/main)
 
-#### 2020-10-19
+#### 2020-10-19 - taller
 
-- María Paula Caldas: Recorriendo el Tidyverse
+- María Paula Caldas: Maneja datos con R: Recorriendo el Tidyverse con las R-Ladies
+	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/273699518/) con toda la info
 	- [Slides y código](https://github.com/mpaulacaldas/rrrtidyverse)
+	- [Vídeo](https://www.youtube.com/watch?v=xLQ7L_mZ7YE)
 
-#### 2020-11-19
+#### 2020-11-19 - taller
 
-- Edurne Alonso: Taller de ggplot
+- Edurne Alonso: Visualización con ggplot
+	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/274250656/) con toda la info
 	- [Código](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20201119_ggplot)
+	- [Vídeo](https://www.youtube.com/watch?v=ttbntn_MfHU)
 
