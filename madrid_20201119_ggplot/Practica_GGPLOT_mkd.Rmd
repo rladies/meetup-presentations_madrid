@@ -1,0 +1,401 @@
+---
+title: "Librería GGPLOT2"
+author: "Edurne Alonso"
+date: "`r Sys.time()`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float:
+      collapsed: True
+      smooth_scroll: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(message = FALSE)
+```
+
+# 1.- Introducción
+
+La librería GGPLOT es un paquete de visualización de datos para el lenguaje de programación R que implementa lo que se conoce como la “Gramática de los Gráficos”, es decir, una representación esquemática y en capas de lo que se dibuja en dichos gráficos como, por ejemplo:
+
+* Tipo de gráfico que se utiliza (geoms – función que representa los puntos)
+* Temas del gráfico 
+* Marcos y los ejes
+* Textos
+* Leyendas
+* Títulos
+* Colores
+* Símbolos
+* Tamaños
+
+Cada ggplot2 tiene 3 componentes mínimas necesarias para poder realizar un gráfico:
+
+1. Los datos
+2. Un conjunto de asignaciones estéticas entre las variables de los datos y las propiedades visuales
+3. Al menos una capa que describe cómo representar cada observación. Las capas se crean generalmente con una función geom_x()
+
+<center>
+
+ ![](C:/Users/edurn/OneDrive/Escritorio/GGPLOT/img1.png)
+ 
+</center>
+
+El siguiente libro tiene una versión online bastante completa: https://ggplot2-book.org/
+
+# 2.- Librerías y datos
+
+Se cargan las librerías necesarias para poder ejecutar el código de la sesión.
+
+```{r}
+# install.packages("ggplot2", "patchwork")
+library(ggplot2)
+library(patchwork)
+```
+
+Además, se va a utilizar el conjunto **mpg** propio de R y de la librería ggplot2 que incluye las siguientes variables:
+
+* manufacturer: Fabricante
+* model: Modelo de coche. Son 38 modelos
+* displ: Cilindrada del motor en litros
+* year: Año de fabricación
+* cyl: Número de cilindrad
+* trans: Tipo de transmisión
+* drv: Tracción del motor
+    + rueda delantera (f)
+    + rueda trasera (r)
+    + cuatro ruedas (4)
+* cty: Millas por galón (mpg) para conducción en ciudad
+* hwy: Millas por galón (mpg) para conducción en carretera
+* fl: Tipo de fuel
+* class: Variable categórica que describe el "tipo" de coche: biplaza, SUV, compacto, etc.
+
+Obtenemos una muestra de los datos y los estadísticos básicos (máximo, mínimo, promedio, cuartiles y si hubiese valores perdidos) de este conjunto.
+
+```{r mpg}
+head(mpg)
+summary(mpg)
+```
+
+# 3.- Parámetros requeridos
+
+Supongamos que queremos representar **cuántos modelos tiene cada fabricante** en el dataset. Para ello, le pasamos el dataset y la variable a graficar a la función ggplot(). Después, seleccionamos el parámetro geom_x() para establecer el tipo de gráfico. Utilizamos el gráfico de barras para reprensentar una variable categórica: geom_bar().
+
+```{r}
+ggplot(mpg, aes(manufacturer)) +
+  geom_bar()
+```
+
+Se observa que *Dodge* y *Toyota* son los que más modelos tienen.
+
+# 4.- Parámetros opcionales
+
+## 4.1.- ggtitle(), xlab() e ylab()
+
+Ahora, vamos a mejorar el aspecto del gráfico cambiando su color y etiquetas. Para poder cambiar el color del gráfico introducimos el parámetro *'fill'* en la función geom_bar(). Este parámetro nos permite rellenar el color de las barras a nuestro gusto. R cuenta con una extensa gama de colores.
+
+```{r}
+ggplot(mpg, aes(manufacturer)) +
+  geom_bar(fill = "darkgreen")
+```
+
+Ahora, para añadir un título al gráfico utilizaremos la función ggtitle() y cambiaremos los nombres de los ejes con xlab() e ylab():
+
+```{r}
+ggplot(mpg, aes(manufacturer)) +
+  geom_bar(fill = "cyan1") +
+  ggtitle("Total de modelos de coches por fabricante") + 
+  xlab("Fabricante") + 
+  ylab("Número de modelos")
+```
+
+Supongamos, ahora, que queremos ver la distribución de las **Millas por galón (mpg) para la conducción en carretera**. Para ello, utilizamos el histograma, geom_histogram(). Además, mejoramos el aspecto del gráfico cambiando sus colores, etiquetas y añadiremos un título. 
+
+```{r}
+ggplot(mpg, aes(hwy)) +
+  geom_histogram(fill = "darkgreen") + 
+  ggtitle("Distribución de las millas por galón para la conducción en carretera") + 
+  xlab("") + 
+  ylab("Frecuencia")
+```
+
+Es interesante conocer que se pueden ajustar los bins o la anchura de los bins. Los bins se refiere al número de barras del gráfico las cuales son equidistantes a lo largo del eje x entre los valores mínimo y máximo de la variable a representar. Para ello, añadimos el parámetro 'bins' a la función geom_histogram().
+
+```{r}
+ggplot(mpg, aes(hwy)) + 
+  geom_histogram(fill = "darkgreen", bins = 40) + 
+  ggtitle("Distribución de las millas por galón para la conducción en carretera") + 
+  xlab("") + 
+  ylab("Frecuencia")
+```
+
+Si queremos manipular la anchura de las barras, añadimos el parámetro 'binwidth' a la función geom_histogram()
+
+```{r}
+ggplot(mpg, aes(hwy)) +  
+  geom_histogram(fill = "darkgreen", bins = 30, binwidth = 0.8) + 
+  ggtitle("Distribución de las millas por galón para la conducción en carretera") + 
+  xlab("") + 
+  ylab("Frecuencia")
+```
+
+## 4.2.- geom_x() colectivos
+
+Los geom_x() colectivos se refeiere al hecho de superponer varios gráficos. Vamos a aprovechar para ver el geom_boxplot() y geom_violin().
+
+El gráfico de violines muestra la distribución de los datos para una variable concreta. Este gráfico es similar al boxplot. 
+
+```{r}
+ggplot(mpg, aes(x = drv, y = cty)) + 
+  geom_violin(aes(fill = drv), color = "white", alpha = 0.8) + #alpha=traslucido de la figura. Entre 0 y 1, 1 el color completo, 0 traslucido
+  xlab("") + 
+  ylab("mpg autopista") +
+  ggtitle("Millas por galón en autopista según tracción")
+```
+
+Hacemos el boxplot, ahora, para comparar:
+
+```{r}
+ggplot(mpg, aes(x = drv, y = cty)) + 
+  geom_boxplot(color = "black", alpha = 0.7) +
+  xlab("") + 
+  ylab("mpg autopista") +
+  ggtitle("Millas por galón en autopista según tracción")
+```
+
+Para hacer una comparación efectiva superponemos ambos gráficos:
+
+```{r}
+ggplot(mpg, aes(x = drv, y = cty)) +
+  geom_violin(aes(fill = drv), color = "black", alpha = 0.8) +
+  geom_boxplot(color = "black", alpha = 0.7) +
+  xlab("") + 
+  ylab("mpg autopista") +
+  ggtitle("Millas por galón en autopista según tracción")
+```
+
+## 4.3.- facet_wrap() y facet_grip()
+
+Estos parámetros permiten representar la información, en vez de en un único gráfico, en varios. La función **facet_wrap()** nos permite romper el grid en tantos como categorías queremos representar. En este caso queremos representar "class" que cuenta con 7 categorías, por tanto, obtendremos un grid de 3x3.
+
+```{r}
+ggplot(mpg, aes(x = cty, y = hwy)) + 
+  geom_point() +
+  xlab("mpg ciudad") + 
+  ylab("mpg autopista") +
+  ggtitle("Ralación entre las millas por galón en autopista y ciudad para cada clase de vehículo") +
+  facet_wrap(.~class)
+```
+
+Si al gráfico anterior, le queremos meter colores para identificar el fabricante, simplemente añadimos a la función aes() el color en base a las categorías de la variable "manufacturer".
+
+```{r}
+ggplot(mpg, aes(x = cty, y = hwy, col = manufacturer)) + 
+  geom_point() +
+  xlab("mpg ciudad") + 
+  ylab("mpg autopista") +
+  ggtitle("Ralación entre las millas por galón en autopista y ciudad para cada clase de vehículo") +
+  facet_wrap(.~drv)
+```
+
+El parámetro **facet_grid()** nos permite meter una expresión de tipo formula y con ello podemos dividir el grid en base a dos variables, por ejemplo, clase y tracción (drv):
+
+```{r}
+ggplot(mpg, aes(x = cty, y = hwy, col = manufacturer)) + 
+  geom_point() +
+  xlab("mpg ciudad") + 
+  ylab("mpg autopista") +
+  ggtitle("Ralación entre las millas por galón en autopista y ciudad para cada clase de vehículo") +
+  facet_grid(class~drv)
+```
+
+## 4.4.- Escalas de colores y leyendas
+
+### 4.4.1.- Escalas de color discretas
+
+Vamos a graficar cuántos modelos hay de cada cilindrada.
+
+```{r}
+fig = ggplot(mpg, aes(as.factor(cyl), fill = as.factor(cyl))) + 
+  geom_bar() +
+  theme(legend.position = "none")
+
+fig
+```
+
+Los modelos de 4 cilindradas son los más comunes frente a los modelos de 5 que son los menos comunes.
+
+La escala predeterminada para colores discretos es **scale_fill_discrete()** que, a su vez, tiene como valor predeterminado **scale_fill_hue()**, por lo que estos son gráficos idénticos:
+
+```{r, fig.show="hold", out.width="30%"}
+fig +
+
+fig + scale_fill_discrete() +
+
+fig + scale_fill_hue()
+```
+
+**scale_colour_brewer()** es una escala de colores discreta. La gama de colores puede verse en:
+
+```{r, fig.height=8}
+RColorBrewer::display.brewer.all()
+```
+
+Aplicamos algunas de estas paletas a nuestro gráfico
+
+```{r, fig.show="hold", out.width="30%"}
+fig + scale_fill_brewer(palette = "RdPu") +
+
+fig + scale_fill_brewer(palette = "Set1") +
+
+fig + scale_fill_brewer(palette = "PiYG")
+```
+
+También podemos realizar una escala manual, **scale_fill_manual()** de colores:
+
+```{r}
+fig + scale_fill_manual(values = c("red", "blue", "green", "magenta"))
+```
+
+### 4.4.2.- Escalas de color continuas
+
+**scale_fill_continuous()**  permite crear un paleta de colores continua: 
+
+```{r}
+ggplot(mpg, aes(cty, hwy, color = displ)) + 
+  geom_jitter() + 
+  scale_fill_continuous(breaks = NULL)
+```
+
+Para aprender más sobre escalas continuas véase: https://ggplot2-book.org/scale-colour.html
+
+### 4.4.3.- Leyendas
+
+Las leyendas se controlan bajo el parámetro **theme()**. Veamos primero aquellos relacionados con la posición de la leyenda: 'legend.position'
+
+```{r, fig.show="hold", out.width="50%"}
+l1 = ggplot(mpg, aes(as.factor(cyl), fill = as.factor(cyl))) + 
+  geom_bar()
+
+l1 # Por defecto a la derecha
+  
+l1 + theme(legend.position = "none") 
+
+l1 + theme(legend.position = "left") 
+
+l1 + theme(legend.position = "bottom") 
+
+```
+
+También, podemos insertar la leyenda dentro del propio gráfico si tuviésemos espacio (lo veremos en la sección 4.5.3).
+
+## 4.5.- Temas
+
+Supongamos que se quiere probar que existe una relación entre el consumo de combustible en ciudad y autopista y la cilindrada del motor. Para ello, se observa la relación entre el consumo de combustible de ciudad y carretera y se pinta según cilindrada. En este caso utilizamos **geom_jitter()** que es lo mismo que **geom_point(position = "jitter")** ya que genera una pequeña cantidad de puntos respecto a la localización de cada punto de forma aleatoria y en muestras pequeñas resulta muy útil. **geom_abline()** agrega otra capa al gráfico, en este caso una recta y = x.
+
+```{r}
+g1 = ggplot(mpg, aes(cty, hwy, color = as.factor(cyl))) +
+  #geom_point() +
+  geom_jitter() + 
+  geom_abline(colour = "grey50", size = 2) +
+  geom_abline(colour = "grey50", size = 2)
+
+g1
+```
+
+Se observa que hay una alta relación entre el consumo en ciudad y autopista ya que los puntos están muy próximos a la recta donde los valores son x = y. Además, los altos consumos se asocian a mayor cilindrada y los consumos más bajos a cilindradas menores.
+
+Ahora, para transformar el aspecto de este gráfico utilizaremos los parámetro labs(), theme() y theme_x().
+
+### 4.5.1.- labs()
+
+Este parámetro nos permite cambiar el título del gráfico, el nombre de los ejes y el título de la leyenda. Este parámetro sustituye al trío ggtitle() + xlab() + ylab():
+
+```{r}
+g2 = g1 +
+  labs(
+    x = "Millas por galón en ciudad",
+    y = "Millas por galón en autopista",
+    colour = "Cilindrada",
+    title = "Correlación entre el consumo en autopista y ciudad según cilindrada"
+  ) 
+
+g2
+```
+
+### 4.5.2.- theme_x()
+
+R tiene varios temas propios,
+aunque existe la posibilidad de hacerlo al gusto. Nosotros vamos a elegir uno predeterminado para el ejemplo. En la siguiente imagen se muestran algunos ejemplos:
+
+<center>
+
+ ![](C:/Users/edurn/OneDrive/Escritorio/GGPLOT/img2.png)
+ 
+</center>
+
+```{r}
+g3 = g2 + theme_bw()
+
+g3
+```
+
+### 4.5.3.- theme()
+
+Supongamos que queremos presentar este gráfico en alguna revista donde exigen las siguientes características de diseño:
+
+* La leyenda debe colocarse dentro del gráfico si hay espacio.
+* El título del gráfico debe tener 13 puntos en negrita.
+* Las líneas de cuadrícula principal deben ser de color gris pálido y las líneas de cuadrícula menor deben eliminarse.
+
+Entonces utilizaremos la función theme() con los siguientes parámetros:
+
+```{r}
+g3 +
+  theme(
+    plot.title = element_text(face = "bold", size = 13),
+    legend.background = element_rect(fill = "white", size = 1, colour = "grey70"),
+    legend.justification = c(1, 0),
+    legend.position = c(0.95, 0.05),
+    axis.ticks = element_line(colour = "grey70", size = 0.2),
+    panel.grid.major = element_line(colour = "grey70", size = 0.2),
+    panel.grid.minor = element_blank()
+  )
+```
+
+# 5.- Organizando gráficos
+
+Otra opción que encontramos es la disposición de varios gráficos independientes en una única salida gracias a la librería **patchwork**. Para ello, realizaremos 4 gráficos y los juntaremos en 1:
+
+```{r}
+p1 = ggplot(mpg) + 
+  geom_point(aes(x = displ, y = hwy))
+
+p2 = ggplot(mpg) + 
+  geom_bar(aes(x = as.character(year), fill = drv), position = "dodge") + 
+  labs(x = "year")
+
+p3 = ggplot(mpg) + 
+  geom_density(aes(x = hwy, fill = drv), colour = NA) + 
+  facet_grid(drv~.)
+
+p4 = ggplot(mpg) + 
+  stat_summary(aes(x = drv, y = hwy, fill = drv), geom = "col", fun.data = mean_se) +
+  stat_summary(aes(x = drv, y = hwy), geom = "errorbar", fun.data = mean_se, width = 0.8)
+```
+
+Juntamos los gráficos:
+
+```{r}
+p1 + p2 + p3 + p4
+```
+
+Como tenemos la misma variable en la leyenda (drv) podemos unificarla en una única leyenda con la función **plot_layout()** concretamente con el parámetro 'guides'
+
+```{r}
+p1 + p2 + p3 + p4 + plot_layout(guides = "collect")
+```
+
+
+

@@ -186,3 +186,8 @@
 - María Paula Caldas: Recorriendo el Tidyverse
 	- [Slides y código](https://github.com/mpaulacaldas/rrrtidyverse)
 
+#### 2020-11-19
+
+- Edurne Alonso: Taller de ggplot
+	- [Código](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20201119_ggplot)
+
