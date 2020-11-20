@@ -161,19 +161,19 @@
 
 #### 2019-09-07 R-Ladies Madrid @ Xantardev
 
-- Leticia Martín-Fuertes y Elen Irazabal: Scrapeando el BOE descubrí un tesoro:
+- Leticia Martín-Fuertes y Elen Irazabal: Scrapeando el BOE descubrí un tesoro
 	- [Slides de la primera parte](https://github.com/rladies/meetup-presentations_madrid/tree/master/santiago_20190907_xantardev/BOE.pdf)
 
 #### 2019-11-26 R-Ladies Madrid @ DevAcademy
 
-- Ana Guardia: DescaRgando datos de la SEC:
+- Ana Guardia: DescaRgando datos de la SEC
 	- [Slides](https://popiula.github.io/Nov2019_RLadiesTalk)
 	
 ### 2020 - 2021
 
 #### 2020-09-28
 
-- Cynthia Maldonado: Intro a R:
+- Cynthia Maldonado: Intro a R
 	- [Slides y código](https://github.com/RLadiesMadrid/Intro-R-/tree/main)
 
 #### 2020-10-19
