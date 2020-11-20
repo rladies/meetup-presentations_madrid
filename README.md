@@ -140,6 +140,11 @@
 	- [Slides](https://slides.com/elenam-lopez/taller-de-introduccion-a-git-y-github)
 	- [Install in Windows](https://slides.com/mrcodedev/instalar-git-en-windows)
 
+#### 2019-02-07 Taller de data.table
+
+- Sara Rodríguez López
+	- [Código](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20190207_datatableIntro)
+
 #### 2019-03-12 Flexdashboards y trucos de R
 
 - Marta Vicente
