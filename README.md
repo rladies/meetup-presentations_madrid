@@ -196,7 +196,7 @@
 	- [Código](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20201119_ggplot)
 	- [Vídeo](https://www.youtube.com/watch?v=ttbntn_MfHU)
 
-#### 2021-02-02 - taller online
+#### 2021-02-04 - taller online
 
 - Natalia Salinas: Reporta con RMarkdown
 	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/275828535/) con toda la info
