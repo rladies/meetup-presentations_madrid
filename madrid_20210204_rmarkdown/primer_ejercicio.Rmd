@@ -1,0 +1,100 @@
+---
+title: "Taller de RMarkdown"
+author: "Natalia Salinas Somoza"
+date: "4/02/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## **Parte 1 con mtcars**
+
+Los datos fueron extraidos de la revista Motor Trend US de 1974 y comprenden el consumo de combustible y 10 aspectos del dise√±o y el rendimiento para 32 modelos automoviles de entre 1973 y 1974.
+
+Opcion A: Con codigo visible
+
+Tabla habitual en R:
+```{r Opcion A}
+data(mtcars)
+mtcars[1:5, ]
+```
+
+Tabla mejorada con Kable:
+```{r}
+knitr::kable(
+  mtcars[1:5, ],
+  caption = "Tabla mejorada"
+)
+```
+
+Opcion B: Sin codigo visible
+```{r Opcion B, echo=FALSE}
+data(mtcars)
+#mtcars[1:5, ]
+knitr::kable(
+  mtcars[1:5, ],
+  caption = "Tabla mejorada"
+)
+```
+
+## **Parte 2 con cars**
+
+El dataset utilizado para este test es Cars del paquete *datasets*. Es importante conocer que los datos corresponden a las velocidades de los autos y la distancia necesaria para que se detengan. Esta informacion fue recopilada en los anios 20 del siglo XX. 
+
+```{r Cars, echo=FALSE}
+data("cars")
+str(cars)
+summary(cars)
+```
+
+Ahora vamos hacer un plot simple, relacionando la velocidad con la distancia. La linea verde indica la relacion. 
+```{r Plot de cars, echo=FALSE}
+plot(cars)
+lines(lowess(cars), col="green")
+```
+
+Un histograma para ver las diferentes velociadades presentes en el set de datos
+```{r, echo=FALSE}
+hist(cars$speed, col = rainbow(5))
+```
+
+
+## **Parte 3 con diamonds**
+
+El dataset se compone de un conjunto de datos que contiene los precios y otros atributos de casi 54.000 diamantes. Las variables son las siguientes: precio, carat (peso del diamante), corte, color, claridad, las medidas de largo, ancho y profundidad, expresadas comos x, y, z, respectivamente, porcentaje total de la profundidad y, finalmente, tabla (anchura de la parte superior del diamante en relaci√≥n con el punto m√°s ancho).
+
+```{r Diamonds, include = FALSE }
+library(dplyr)
+library(ggplot2)
+```
+
+```{r, echo=FALSE}
+knitr::kable(head(diamonds))
+```
+
+øHay variaciones de precio en los diamantes segun sus caracteristicas?
+
+```{r Plot de diamonds, echo=FALSE}
+ggplot(diamonds, aes(price, color = cut)) + 
+  geom_freqpoly(binwidth = 500) +
+  scale_color_brewer(name = "Cut", palette = "Dark2") +
+  xlab("Price (USD)") +
+  ylab("Frequency") +
+  theme_minimal()
+```  
+
+## **Parte 4 Ejemplo de funcion**
+
+Elaboremos una pequeÒa funcion que nos permita calcular el resultado de elevar a la segunda potencia respecto de un valor dado. 
+
+```{r Funcion}
+potencia <- function(x, y = 2) {
+                                result <- x^y
+                                print(paste(x,"elevado a la", y, "es", result))
+                                }
+potencia(3)
+potencia(4)
+potencia(5)
+```

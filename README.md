@@ -182,17 +182,24 @@
 	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/273193691/) con toda la info
 	- [Slides y código](https://github.com/RLadiesMadrid/Intro-R-/tree/main)
 
-#### 2020-10-19 - taller
+#### 2020-10-19 - taller online
 
 - María Paula Caldas: Maneja datos con R: Recorriendo el Tidyverse con las R-Ladies
 	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/273699518/) con toda la info
 	- [Slides y código](https://github.com/mpaulacaldas/rrrtidyverse)
 	- [Vídeo](https://www.youtube.com/watch?v=xLQ7L_mZ7YE)
 
-#### 2020-11-19 - taller
+#### 2020-11-19 - taller online
 
 - Edurne Alonso: Visualización con ggplot
 	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/274250656/) con toda la info
 	- [Código](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20201119_ggplot)
 	- [Vídeo](https://www.youtube.com/watch?v=ttbntn_MfHU)
+
+#### 2021-02-02 - taller online
+
+- Natalia Salinas: Reporta con RMarkdown
+	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/275828535/) con toda la info
+	- [Slides y materiales](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20210204_rmarkdown)
+	- [Vídeo](https://www.youtube.com/watch?v=v5E8mBUtmZ8)
 

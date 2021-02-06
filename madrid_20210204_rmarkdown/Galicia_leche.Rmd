@@ -1,0 +1,87 @@
+---
+title: "Lecheria en Galicia"
+author: "Natalia Salinas Somoza"
+date: "2/4/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# **Produccion de leche en Galicia (1998-2016)**
+
+
+Galicia es lider en la producción de leche a nivel estatal, con un 55% de las explotaciones. La modernizacion realizada por el sector en las ultimas decadas lo situan como referente europeo en calidad, innovación, garantías de salubridad alimentaria y vocación de permanencia.
+
+
+```{r Liberias, include = FALSE }
+library(rgdal)
+library(sp)
+library(ggplot2)
+library(dplyr)
+
+```
+
+
+```{r Mapa, echo=FALSE, warning = FALSE }
+galicia_map <- readOGR(dsn = "C:/Users/Natalia/Desktop/Taller de RMarkdown/Galicia", layer="Provincias_IGN", verbose=FALSE)
+
+par(mar=c(1,1,2,1))
+plot(galicia_map, col="#f2f2f2", bg="skyblue", lwd=0.5, border=1, main = "Mapa de Galicia")
+
+```
+
+
+```{r Leche, echo=FALSE}
+df <- read.csv("produccionlecheGalicia.csv", sep = ";")
+
+prodleche <- as.data.frame(df)
+
+anio <- prodleche %>%
+        select(Anio) %>%
+        distinct(Anio)
+
+ACoruna <- subset(prodleche, Provincia == "A Coruna", select = Prod_total_miles_lt)
+Pontevedra <- subset(prodleche, Provincia == "Pontevedra", select = Prod_total_miles_lt)
+Lugo <- subset(prodleche, Provincia == "Lugo", select = Prod_total_miles_lt)
+Ourense <- subset(prodleche, Provincia == "Ourense", select = Prod_total_miles_lt)
+
+Galicia <- ACoruna + Pontevedra + Lugo + Ourense 
+
+GaliciaAnual <- cbind(anio,Galicia)
+
+ACoruna_anio <- subset(prodleche, Provincia == "A Coruna", select = Anio:Prod_total_miles_lt)
+Pontevedra_anio <- subset(prodleche, Provincia == "Pontevedra", select = Anio:Prod_total_miles_lt)
+Lugo_anio <- subset(prodleche, Provincia == "Lugo", select = Anio:Prod_total_miles_lt)
+Ourense_anio <- subset(prodleche, Provincia == "Ourense", select = Anio:Prod_total_miles_lt)
+
+```
+
+Durante el periodo analizado, durante `r min(GaliciaAnual$Anio)` se dio la menor produccion, `r min(GaliciaAnual$Prod_total_miles_lt)`, y la maxima tuvo lugar en `r max(GaliciaAnual$Anio)`, `r max(GaliciaAnual$Prod_total_miles_lt)`. La media fue de 2342839.
+
+```{r Estadisticas, include = FALSE}
+summary(GaliciaAnual)
+```
+
+```{r Galicia, echo=FALSE}
+ggplot(GaliciaAnual,xlab = "Anio", ylab ="Prod_total_miles_lt") + 
+  geom_line( aes(Anio, Prod_total_miles_lt), colour="#009E73")
+```
+
+De las cuatro provincias gallegas, Lugo se posiciono como la mas productiva. En el siguiente grafico se puede observar la evolucion de la produccion a lo largo de tiempo.
+
+```{r Lugo, echo=FALSE}
+plot(Lugo_anio$Anio, Lugo_anio$Prod_total_miles_lt, type = "l", lwd= 2, xlab = "Años", ylab = "Producción en miles de litros ", main = "Producción de leche en Lugo (1998-2016)", col = "green")
+```
+
+
+Compartivamente, en el siguente grafico se puede determinar cual fue la provincia mas productiva, respecto de la menos productiva. La principal variable que afecta a la produccion es la disposicion de terreno y pasto que hagan factible la produccion de leche. 
+
+
+```{r Provincias, echo=FALSE}
+ggplot(prodleche, xlab = "Años", ylab ="Producción total en miles de litros") + 
+  geom_line(aes(Anio, Prod_total_miles_lt, colour = Provincia))
+```
+
+
