@@ -203,3 +203,9 @@
 	- [Slides y materiales](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20210204_rmarkdown)
 	- [Vídeo](https://www.youtube.com/watch?v=v5E8mBUtmZ8)
 
+#### 2021-03-15 - taller online
+
+- Stephanie Orellana: Analiza datos espaciales
+	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/276388231/) con toda la info
+	- [Slides](https://sporella.github.io/datos_espaciales_madrid/#1)
+	- [Materiales](https://github.com/sporella/datos_espaciales_madrid)
