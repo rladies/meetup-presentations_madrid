@@ -209,3 +209,4 @@
 	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/276388231/) con toda la info
 	- [Slides](https://sporella.github.io/datos_espaciales_madrid/#1)
 	- [Materiales](https://github.com/sporella/datos_espaciales_madrid)
+	- [Vídeo](https://www.youtube.com/watch?v=59tO2ARvVVU)
