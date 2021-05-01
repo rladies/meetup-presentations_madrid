@@ -210,3 +210,11 @@
 	- [Slides](https://sporella.github.io/datos_espaciales_madrid/#1)
 	- [Materiales](https://github.com/sporella/datos_espaciales_madrid)
 	- [Vídeo](https://www.youtube.com/watch?v=59tO2ARvVVU)
+
+#### 2021-04-22 - taller online
+
+- Julia Lastra: Ensambla modelos con XGBoost
+	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/277399850/) con toda la info
+	- [Materiales](https://github.com/lastree/talks)
+	- [Vídeo](https://www.youtube.com/watch?v=YvBXxPp-vHQ)
+
