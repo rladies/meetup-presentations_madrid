@@ -218,3 +218,10 @@
 	- [Materiales](https://github.com/lastree/talks)
 	- [Vídeo](https://www.youtube.com/watch?v=YvBXxPp-vHQ)
 
+#### 2021-05-11 - taller online
+
+- Clara Piniella: Ensambla modelos con XGBoost
+	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/277956774/) con toda la info
+	- [Materiales](https://github.com/Clapiniella/nn_in_R)
+	- Vídeo: próximamente
+
