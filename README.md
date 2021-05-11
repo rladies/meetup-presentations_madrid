@@ -220,7 +220,7 @@
 
 #### 2021-05-11 - taller online
 
-- Clara Piniella: Ensambla modelos con XGBoost
+- Clara Piniella: Implementa redes neuronales en R
 	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/277956774/) con toda la info
 	- [Materiales](https://github.com/Clapiniella/nn_in_R)
 	- Vídeo: próximamente
