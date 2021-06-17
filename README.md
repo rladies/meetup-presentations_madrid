@@ -225,3 +225,10 @@
 	- [Materiales](https://github.com/Clapiniella/nn_in_R)
 	- [Vídeo](https://www.youtube.com/watch?v=YATLqzrI5jc)
 
+#### 2021-06-17 - taller online
+
+- Elena Rivas: Empezando con clusterización
+	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/278675766/) con toda la info
+	- [Slides y materiales](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20210617_clusterizacion)
+	- Vídeo: próximamente
+
