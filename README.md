@@ -176,7 +176,7 @@
 	
 ### 2020 - 2021
 
-#### 2020-09-28 - taller
+#### 2020-09-28 - taller online
 
 - Cynthia Maldonado: Intro a R
 	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/273193691/) con toda la info
@@ -230,5 +230,13 @@
 - Elena Rivas: Empezando con clusterización
 	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/278675766/) con toda la info
 	- [Slides y materiales](https://github.com/rladies/meetup-presentations_madrid/tree/master/madrid_20210617_clusterizacion)
-	- Vídeo: próximamente
+	- [Vídeo](https://www.youtube.com/watch?v=_dspP7kRXwI)
 
+### 2021 - 2022
+
+#### 2021-10-28 - taller online
+
+- Elsa Toribio: Intro a R
+	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/281461960/) con toda la info
+	- [Slides y materiales](https://github.com/ElsaTH/Taller-RLadies)
+	- [Vídeo](https://www.youtube.com/watch?v=7xl2j8SSd4A)
