@@ -240,3 +240,12 @@
 	- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/281461960/) con toda la info
 	- [Slides y materiales](https://github.com/ElsaTH/Taller-RLadies)
 	- [Vídeo](https://www.youtube.com/watch?v=7xl2j8SSd4A)
+
+#### 2022-02-24 - charla + taller online
+
+- Izaskun López-Samaniego: viajando con los datos
+- Pedro Concejero: Interactividad web con R + Shiny
+
+Materiales:
+- [Convocatoria de Meetup](https://www.meetup.com/es-ES/rladies-madrid/events/283974874/) con toda la info
+- [Vídeo](https://www.youtube.com/watch?v=CMsW2hwNkb0)
